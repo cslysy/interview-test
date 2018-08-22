@@ -1,6 +1,5 @@
 package io.github.cslysy.interview.refactor;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,10 +38,16 @@ public class Refactor01 {
     @Test
     public void test() throws Exception {
         /*
-         * Given file containing two lines:
+         * GIVEN file contains two lines:
          * Ala ma kota
          * Piotr ma psa
          */
         final String path = "src/test/resources/refactor1.txt";
+
+        // WHEN
+        // write your code here...
+
+        // THEN
+        //write your code here...
     }
 }

@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Refactor02 {
@@ -23,11 +22,17 @@ public class Refactor02 {
 
     @Test
     public void test() throws Exception {
-        // given
+        // GIVEN
         final List<String> firstFamily = Arrays.asList("john", "", "bob", "danny");
         final List<String> secondFamily = Arrays.asList("james", "peter", null, "laura");
         final List<List<String>> families = Arrays.asList(
             firstFamily, secondFamily
         );
+
+        // WHEN
+        // write your code here...
+
+        // THEN
+        // write your code here...
     }
 }
