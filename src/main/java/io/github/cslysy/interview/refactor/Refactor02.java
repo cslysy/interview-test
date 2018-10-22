@@ -7,29 +7,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Refactor02 {
 
     private static List<String> namesToUpperCase(final List<List<String>> families) {
-        final List<String> result = new ArrayList<>();
 
-        families.stream()
+        return families.stream()
                 .flatMap(Collection::stream)
                 .filter(x -> x != null)
                 .filter(x -> x != "")
-                .forEach(x -> result.add(x.toUpperCase()));
-
-
-//        for (List<String> family : families) {
-//            for (String names : family) {
-//                if (names != null && !names.isEmpty()) {
-//                    result.add(names.toUpperCase());
-//                }
-//            }
-//        }
-        return result;
+                .map(x -> x.toUpperCase())
+                .collect(Collectors.toList());
     }
 
     @Test
